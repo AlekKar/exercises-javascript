@@ -15,15 +15,15 @@ theory: |
 
   ```javascript
   const reverse = (str) => {
-    let i = 0;
+    let i = str.length - 1;
     // Нейтральный элемент для строк это пустая строка
     let result = '';
-    while (i < str.length) {
+    while (i >= 0) {
       // Соединяем в обратном порядке
       result = `${str[i]}${result}`;
       // Тоже самое через конкатенацию
       // result = str[i] + result;
-      i = i + 1;
+      i = i - 1;
     }
 
     return result;
